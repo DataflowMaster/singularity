@@ -1,0 +1,35 @@
+{
+  "name": "singularity",
+  "version": "1.0.0",
+  "description": "Code with domain driven development structure on the response form of a person.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "babel": "./node_modules/.bin/babel src --out-dir lib --presets=@babel/env",
+    "clean": "rm -rf lib ",
+    "src": "babel src --out-dir lib/src/ --presets=@babel/env",
+    "spec": "babel test --out-dir lib/test/ --presets=@babel/env",
+    "test": "npm run clean && npm run src && npm run spec && mocha lib/test/*/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DataflowMaster/singularity.git"
+  },
+  "author": "Israel Contreras Salazar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DataflowMaster/singularity/issues"
+  },
+  "homepage": "https://github.com/DataflowMaster/singularity#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "mocha": "^7.0.1"
+  },
+  "dependencies": {
+    "testdouble": "^3.12.5"
+  }
+}
