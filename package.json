@@ -7,11 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "babel": "./node_modules/.bin/babel src --out-dir lib --presets=@babel/env",
-    "clean": "rm -rf lib ",
-    "src": "babel src --out-dir lib/src/ --presets=@babel/env",
-    "spec": "babel test --out-dir lib/test/ --presets=@babel/env",
-    "test": "npm run clean && npm run src && npm run spec && mocha lib/test/*/*"
+    "clean": "rm -rf ./node_modules",
+    "test": "babel-node config/run_tests.js"
   },
   "repository": {
     "type": "git",
@@ -24,12 +21,11 @@
   },
   "homepage": "https://github.com/DataflowMaster/singularity#readme",
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
-    "mocha": "^7.0.1"
-  },
-  "dependencies": {
+    "@babel/node": "^7.8.4",
+    "jasmine": "^3.5.0",
     "testdouble": "^3.12.5"
-  }
+  },
+  "dependencies": {}
 }

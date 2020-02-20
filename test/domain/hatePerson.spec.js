@@ -2,7 +2,7 @@ import { buildHatePerson } from "../../src/domain/hatePerson";
 import td from "testdouble";
 
 describe('How hate to person', function() {
-    let hatePerson ;
+    let hatePerson;
     const feelings = {
         love: td.object(['isFeelingBy']),
         hate: td.object(['feelItBy']),
