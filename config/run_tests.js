@@ -1,8 +1,8 @@
 import Jasmine from 'jasmine'
-import { SpecReporter } from 'jasmine-spec-reporter';
+import Reporter  from 'jasmine-terminal-reporter';
 
 const jasmine = new Jasmine();
-const reporter = new SpecReporter();
+const reporter = new Reporter();
 
 console.clear();
 
