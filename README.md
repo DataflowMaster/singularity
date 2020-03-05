@@ -6,13 +6,12 @@ Singularity is a system to reply automatically the process of human decision rel
 materialization of functions based in feelings with the goal of survive
 
 ## Mechanisms
-######[MEC-1] Activate instinct
+- [MEC-1] Activate instinct
 When the character comes into contact with a situation that alters his emotions, he enters a state 
 of pure instinct suppressing emotion and immersing in the darkness. 
 
-######[MEC-2] Attack with blade
-######[MEC-2] Jump
-######[MEC-2] Move forward
-######[MEC-2] Move Back
-######[MEC-2] 
-
+#Game Reference
+- Enter the Gungeon
+- Celeste
+- Owlboy
+- Hyper Light Drifter
