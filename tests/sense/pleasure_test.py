@@ -1,21 +1,17 @@
 #!/usr/bin/env python
 from unittest import TestCase
+from core.sense.pleasure import buildPleasure
+from unittest.mock import Mock
 
-class TestStringMethods(TestCase):
+class SensePleasure(TestCase):
 
-    def test_upper(self):
-        self.assertEqual('foo'.upper(), 'FOO')
+    def setUp(self):
+        self.mock = Mock()
+        def stimulus():
+            self.mock.method()
 
-    def test_isupper(self):
-        self.assertTrue('FOO'.isupper())
-        self.assertFalse('Foo'.isupper())
+        self.pleasure = buildPleasure(stimulus)
 
-    def test_split(self):
-        s = 'hello world'
-        self.assertEqual(s.split(), ['hello', 'world'])
-        # check that s.split fails when the separator is not a string
-        with self.assertRaises(TypeError):
-            s.split(2)
-
-if __name__ == '__main__':
-    main()
+    def test_catch_stimulus(self):
+        self.pleasure()
+        self.mock.method.assert_called()

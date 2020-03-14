@@ -1,4 +1,7 @@
 #!/usr/bin/env python
 
-def sum(a, b):
-    return a + b
+def buildPleasure(stimulus):
+    def pleasure():
+        stimulus()
+    
+    return pleasure
